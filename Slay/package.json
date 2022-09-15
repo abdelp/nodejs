@@ -2,7 +2,7 @@
   "name": "slay",
   "version": "1.0.0",
   "description": "App for testing slay",
-  "main": "index.js",
+  "main": "lib/",
   "dependencies": {
     "slay": "^4.0.0"
   },
