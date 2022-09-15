@@ -16,3 +16,6 @@ If you want a single step that produces a flame graph locally, try [0x](https://
 
 ## Create a flame graph with system perf tools
 
+[not finished]
+
+couldn't finish document because perf is not supported on WSL2G
