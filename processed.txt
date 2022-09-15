@@ -1,0 +1,245 @@
+Statistical profiling result from isolate-0x52ddb10-7022-v8.log, (1496 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1396   93.3%          /home/abdel/.nvm/versions/node/v16.17.0/bin/node
+     13    0.9%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      1    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+
+ [C++]:
+   ticks  total  nonlib   name
+     45    3.0%   52.3%  __write
+     11    0.7%   12.8%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      7    0.5%    8.1%  __pthread_cond_wait
+      5    0.3%    5.8%  _IO_fwrite
+      4    0.3%    4.7%  std::ostream::sentry::sentry(std::ostream&)
+      4    0.3%    4.7%  _IO_file_xsputn
+      3    0.2%    3.5%  __GI___pthread_mutex_unlock
+      2    0.1%    2.3%  __munmap
+      2    0.1%    2.3%  __lll_lock_wait
+      1    0.1%    1.2%  do_futex_wait.constprop.0
+      1    0.1%    1.2%  __mmap
+      1    0.1%    1.2%  __libc_malloc
+
+ [Summary]:
+   ticks  total  nonlib   name
+      0    0.0%    0.0%  JavaScript
+     86    5.7%  100.0%  C++
+      5    0.3%    5.8%  GC
+   1410   94.3%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     24   49.0%    1.6%  __write
+     11   22.4%    0.7%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      5   10.2%    0.3%  _IO_fwrite
+      4    8.2%    0.3%  std::ostream::sentry::sentry(std::ostream&)
+      4    8.2%    0.3%  _IO_file_xsputn
+      1    2.0%    0.1%  __libc_malloc
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1396   93.3%  /home/abdel/.nvm/versions/node/v16.17.0/bin/node
+   1363   97.6%    /home/abdel/.nvm/versions/node/v16.17.0/bin/node
+   1046   76.7%      LazyCompile: ~inspectorWaitForDebugger node:inspector:181:34
+   1046  100.0%        LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:91065
+   1046  100.0%          LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:90356
+   1046  100.0%            LazyCompile: ~7207 /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:89296
+    136   10.0%      LazyCompile: ~spawnSync node:internal/child_process:1097:19
+    136  100.0%        LazyCompile: ~spawnSync node:child_process:783:19
+    133   97.8%          LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:91065
+    133  100.0%            LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:90356
+      3    2.2%          LazyCompile: ~t /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:84828
+      3  100.0%            LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:84989
+     77    5.6%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     65   84.4%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+     10   15.4%          Function: ~<anonymous> node:crypto:1:1
+     10  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      9   13.8%          Function: ~<anonymous> node:https:1:1
+      9  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    7.7%          Function: ~<anonymous> node:tls:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    6.2%          Function: ~<anonymous> node:worker_threads:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    6.2%          Function: ~<anonymous> node:_http_server:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    4.6%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      3  100.0%            LazyCompile: ~get node:crypto:294:8
+      3    4.6%          Function: ~<anonymous> node:internal/child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    4.6%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.1%          LazyCompile: ~lazyLoadStreams node:fs:2893:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:3036:17
+      2    3.1%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.1%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.1%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    3.1%          Function: ~<anonymous> node:_tls_wrap:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    1.5%          LazyCompile: ~afterInspector node:internal/errors:765:17
+      1    1.5%          Function: ~<anonymous> node:module:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/worker:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/tls/secure-context:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:inspector:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.5%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     10   13.0%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      6   60.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      6  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      4   40.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      4  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      2    2.6%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+     27    2.0%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     24   88.9%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      5   20.8%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      5  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4   16.7%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      4  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      4   16.7%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    8.3%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    8.3%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.2%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:560:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    4.2%          LazyCompile: ~get BlockList node:net:1920:16
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1    4.2%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.2%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.2%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.2%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.2%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3   11.1%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      2   66.7%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   33.3%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:329:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+
+     45    3.0%  __write
+     24   53.3%    /home/abdel/.nvm/versions/node/v16.17.0/bin/node
+      4   16.7%      /home/abdel/.nvm/versions/node/v16.17.0/bin/node
+      1   25.0%        LazyCompile: ~getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          LazyCompile: ~syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      1   25.0%        LazyCompile: ~c /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:130
+      1  100.0%          LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:91473
+      1  100.0%            LazyCompile: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:91427
+      1   25.0%        Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1   25.0%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      1    4.2%      LazyCompile: ~value node:internal/console/constructor:230:20
+      1  100.0%        LazyCompile: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    4.2%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1    4.2%      LazyCompile: ~setupWebCrypto node:internal/bootstrap/pre_execution:196:24
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%      LazyCompile: ~setupDebugEnv node:internal/bootstrap/pre_execution:290:23
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%      LazyCompile: ~resolve node:path:1091:10
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%      LazyCompile: ~realpathSync node:fs:2460:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1    4.2%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.2%      LazyCompile: ~markCwd node:internal/util/inspect:1305:17
+      1  100.0%        LazyCompile: ~formatError node:internal/util/inspect:1341:21
+      1  100.0%          LazyCompile: ~formatRaw node:internal/util/inspect:828:19
+      1  100.0%            LazyCompile: ~formatValue node:internal/util/inspect:750:21
+      1    4.2%      LazyCompile: ~getESMFacade node:internal/bootstrap/loaders:281:15
+      1  100.0%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1    4.2%      LazyCompile: ~from node:buffer:301:28
+      1  100.0%        Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    4.2%      LazyCompile: ~__webpack_require__ /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:99427
+      1  100.0%        LazyCompile: ~7207 /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:89296
+      1  100.0%          LazyCompile: ~__webpack_require__ /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:99427
+      1  100.0%            Function: ~<anonymous> /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:2
+      1    4.2%      LazyCompile: ~<anonymous> node:internal/fs/utils:360:35
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/fs/utils:671:38
+      1  100.0%          LazyCompile: ~realpathSync node:fs:2460:22
+      1  100.0%            LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      1    4.2%      Function: ~<instance_members_initializer> node:internal/modules/esm/loader:190:3
+      1  100.0%        LazyCompile: ~ESMLoader node:internal/modules/esm/loader:240:14
+      1  100.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.2%      Function: ~<anonymous> node:zlib:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%            Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1    4.2%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1    4.2%      Function: ~<anonymous> node:internal/crypto/webcrypto:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1    4.2%      Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/tls/secure-context:1:1
+      1    4.2%      Function: ^n /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:82434
+      1  100.0%        LazyCompile: ~7551 /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:81916
+      1  100.0%          LazyCompile: ~__webpack_require__ /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:99427
+      1  100.0%            LazyCompile: ~9140 /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:84024
+      1    4.2%      Function: ^__webpack_require__ /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:99427
+      1  100.0%        LazyCompile: ~5370 /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:78570
+      1  100.0%          Function: ^__webpack_require__ /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:99427
+      1  100.0%            LazyCompile: ~7551 /home/abdel/.vscode-server/data/User/workspaceStorage/267c71dcedcc8c525cd45e451dd7a139/ms-vscode.js-debug/bootloader.js:2:81916
+
