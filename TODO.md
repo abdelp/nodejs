@@ -4,3 +4,4 @@
  * TypeORM
  * Prima
  * etc
+- Investigate more about WebAssembly
