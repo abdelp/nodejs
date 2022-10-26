@@ -1,23 +1,21 @@
 {
-  "name": "slay",
+  "name": "slay-app",
   "version": "1.0.0",
-  "description": "App for testing slay",
-  "main": "lib/",
-  "dependencies": {
-    "slay": "^4.0.0"
-  },
-  "devDependencies": {},
+  "description": "App to test Slay",
+  "main": "lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/abdelp/nodejs.git"
-  },
-  "author": "Abdel P.",
+  "author": "Abdel Pérez",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abdelp/nodejs/issues"
+  "dependencies": {
+    "express": "^4.18.2",
+    "slay": "^4.0.0"
   },
-  "homepage": "https://github.com/abdelp/nodejs#readme"
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0"
+  }
 }
