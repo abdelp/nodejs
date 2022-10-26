@@ -1,0 +1,27 @@
+{
+  "name": "start-api-from-scratch",
+  "version": "0.0.0",
+  "description": "Start Api App from scratch",
+  "scripts": {
+    "build": "gasket build",
+    "start": "gasket start",
+    "local": "gasket local",
+    "test:runner": "mocha -r setup-env --recursive \"test/**/*.*(test|spec).js\"",
+    "test:watch": "npm run test:runner -- --watch",
+    "test": "npm run test:runner",
+    "test:coverage": "nyc --reporter=text --reporter=json-summary npm run test:runner"
+  },
+  "dependencies": {
+    "@gasket/cli": "^6.34.4",
+    "@gasket/plugin-mocha": "^6.34.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/register": "^7.12.10",
+    "chai": "^4.2.0",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "setup-env": "^2.0.0",
+    "sinon": "^14.0.0"
+  }
+}
