@@ -5,3 +5,4 @@
  * Prima
  * etc
 - Investigate more about WebAssembly
+- [Mixu's Node book](http://book.mixu.net/node/index.html)
