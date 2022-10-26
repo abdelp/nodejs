@@ -1,0 +1,24 @@
+{
+  "exitError": "Error: Failed to fetch @godaddy/gasket-preset-webapp: npm exited with non-zero code\n\n\nnpm ERR! code E404\nnpm ERR! 404 Not Found - GET https://artifactory.secureserver.net/artifactory/api/npm/node-virt/@godaddy%2fgasket-preset-webapp - not_found\nnpm ERR! 404 \nnpm ERR! 404  '@godaddy/gasket-preset-webapp@latest' is not in the npm registry.\nnpm ERR! 404 You should bug the author to publish it (or use the name yourself!)\nnpm ERR! 404 \nnpm ERR! 404 Note that you can also install from a\nnpm ERR! 404 tarball, folder, http url, or git url.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/abdel/.npm/_logs/2022-10-26T21_04_41_016Z-debug.log\n\n    at /home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/fetcher.js:152:13\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async PackageFetcher.fetch (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/fetcher.js:148:24)\n    at async PackageFetcher.clone (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/fetcher.js:117:25)\n    at async /home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/actions/load-preset.js:24:21\n    at async Promise.all (index 0)\n    at async remotePresets (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/actions/load-preset.js:21:28)\n    at async loadPreset (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/actions/load-preset.js:76:21)\n    at async wrapper (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/action-wrapper.js:25:7)\n    at async CreateCommand.run (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/commands/create.js:61:9)",
+  "destOverride": true,
+  "cwd": "/home/abdel/Github/nodejs",
+  "dest": "/home/abdel/Github/nodejs/your-app-name",
+  "relDest": "./your-app-name",
+  "extant": false,
+  "pkgLinks": [],
+  "localPresets": [],
+  "rawPresets": [
+    "@godaddy/webapp"
+  ],
+  "messages": [],
+  "warnings": [],
+  "errors": [
+    "Error: Failed to fetch @godaddy/gasket-preset-webapp: npm exited with non-zero code\n\n\nnpm ERR! code E404\nnpm ERR! 404 Not Found - GET https://artifactory.secureserver.net/artifactory/api/npm/node-virt/@godaddy%2fgasket-preset-webapp - not_found\nnpm ERR! 404 \nnpm ERR! 404  '@godaddy/gasket-preset-webapp@latest' is not in the npm registry.\nnpm ERR! 404 You should bug the author to publish it (or use the name yourself!)\nnpm ERR! 404 \nnpm ERR! 404 Note that you can also install from a\nnpm ERR! 404 tarball, folder, http url, or git url.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /home/abdel/.npm/_logs/2022-10-26T21_04_41_016Z-debug.log\n\n    at /home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/fetcher.js:152:13\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async PackageFetcher.fetch (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/fetcher.js:148:24)\n    at async PackageFetcher.clone (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/fetcher.js:117:25)\n    at async /home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/actions/load-preset.js:24:21\n    at async Promise.all (index 0)\n    at async remotePresets (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/actions/load-preset.js:21:28)\n    at async loadPreset (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/actions/load-preset.js:76:21)\n    at async wrapper (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/scaffold/action-wrapper.js:25:7)\n    at async CreateCommand.run (/home/abdel/.nvm/versions/node/v14.15.5/lib/node_modules/@gasket/cli/src/commands/create.js:61:9)"
+  ],
+  "nextSteps": [],
+  "generatedFiles": {},
+  "prompts": true,
+  "appName": "your-app-name",
+  "rawPlugins": [],
+  "plugins": []
+}
