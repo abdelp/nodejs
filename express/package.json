@@ -1,15 +1,16 @@
 {
-  "name": "express-app",
-  "version": "1.0.0",
-  "description": "An app to play around with express package",
-  "main": "index.js",
+  "name": "express",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "Abdel Pérez",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
-  },
-  "devDependencies": {}
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
+  }
 }
