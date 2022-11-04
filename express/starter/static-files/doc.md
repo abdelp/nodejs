@@ -21,3 +21,14 @@ Now, you can load the files that are in the *public* directory from the `/static
 ```js
 https://locahost:3000/static/images/kitten.jpg
 ```
+
+However, the path that you provide to the `express.static` function is relative to the directory from where you launch your node process. If you run the express app from another directoy, :
+
+**How is recommended to provide the path of the directory where you want to serve the static file from?**
+
+It's safer to use the absolute path of the directory that you want to serve. E.g.:
+
+```js
+const path = require('path');
+app.use('/static', express.static(path.join(__dirname, 'public')))
+```
