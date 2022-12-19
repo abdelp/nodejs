@@ -39,3 +39,63 @@ Set the following cookie options to enhance security:
 # Data Validation
 
 ## XSS
+
+[sqlmap](http://sqlmap.org/) is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.
+
+# Secure Transmission
+
+## SSL Version, Algorithms, Key length
+
+You have to test:
+
+* ciphers, keys and renegotiation is properly configured
+* certificate validity
+
+Using the tool [nmap](https://nmap.org/) and [sslyze](https://github.com/nabla-c0d3/sslyze)
+
+### Checking for Certificate information
+
+```sh
+nmap --script ssl-cert,ssl-enum-ciphers -p 443,465,993,995 www.example.com
+```
+
+### Testing SSL/TLS vulnerabilities with sslyze
+
+```sh
+./sslyze.py --regular example.com:443
+```
+
+## HSTS
+
+```sh
+strict-transport-security:max-age=631138519
+```
+
+Testing:
+
+```sh
+curl -s -D https://twitter.com/ | grep -i Strict
+```
+
+# Denial of Service
+
+## Account Lockout
+
+## Regular Expression
+
+# Error Handling
+
+## Error Codes, Stack Traces
+
+# NPM
+
+## The Node Security Project
+
+```sh
+npm i nsp -g
+# either audit the shrinkwrap
+nsp audit-shrinkwrap
+# or the package.json
+nsp audit-package
+```
+
