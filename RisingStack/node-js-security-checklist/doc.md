@@ -99,3 +99,4 @@ nsp audit-shrinkwrap
 nsp audit-package
 ```
 
+You can also use [requireSafe]()
